@@ -24,8 +24,10 @@ def generateSentence():
 wordBank = []
 wordFollowers = {}
 
-print "Enter training text:"
-process(raw_input())
-print ""
+print "Training..."
+training = open('training.txt','r')
+process(training.readline())
+training.close()
 for i in xrange(10):
+	print ""
 	print generateSentence()
